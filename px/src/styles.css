@@ -1,0 +1,242 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face{
+    font-family: "eurostile";
+    src: url("assets/fonts/Eurostile.ttf")
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.btn{
+    background-color: rgb(10, 175, 241);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 10px!important;
+    line-height: 1.42857143;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-family: Brutal_Regular, "Open Sans", arial;
+    max-width: 450px;
+    padding: 15px 35px;
+    margin: 5px;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.btn:hover{
+    background-color: rgb(9, 157, 217);
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #2a2a2a;
+    text-transform: uppercase;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 10px!important;
+    position: static!important;
+    line-height: 1.42857143;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+}
+
+header .logo{
+    float: left;
+}
+
+header ul {
+    display: block;
+    width: 45%;
+    height: inherit;
+    margin: 0px auto;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+header a {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    transition: all 300ms;
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover,
+.actived {
+    background: rgba(0, 0, 0, 0.9);
+    /*color:chartreuse*/
+}
+
+
+.logo{
+    font-family: "eurostile", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.logo a{
+    background: transparent;
+}
+
+.logo a:hover {
+    background: transparent; 
+}
+
+
+body {
+    background: white;
+    background-attachment: fixed;
+}
+
+body * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+}
+
+
+.footer{
+    display: block;
+    width: 100%;
+    background: #2a2a2a;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: lightgray;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+}
+
+.footer .footer-top{
+    padding-top: 6px;
+    border: 1px dashed burlywood;
+    height: 50px;
+    text-align: center;
+    text-size-adjust: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 10px;
+}
+
+.footer .footer-content{
+    border: 1px dashed red;
+    height: 60px;
+}
+
+.footer .footer-bottom{
+    display: block;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 10px!important;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 850px;
+}
+
+
+.content{
+    width: 70%;
+    min-height: 700px;
+    margin: 0px auto 0px;
+    box-shadow: 0px 0px 40px black;
+    background: rgba(255,255,255,0.7);
+    font-family: "Open Sans" Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px!important;
+
+}
+
+.content .main-content{
+    width: 70%;
+    float:left;
+
+}
+.content .main-content .news-post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: lightgray;
+    position: relative;
+}
+
+.content .main-content .news-post .read-more{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.content .main-content .news-post .post-img{
+    width: 40%;
+    height: 100%;
+    float: left;
+
+}
+
+.content .main-content .news-post .news-preview{
+    width: 60%;
+    padding: 14px;
+    float: right;
+}
+
+.content .sidebar{
+    width: 30%;
+    float: left;
+    border: 1px dashed green;
+    height: 500px;
+}

@@ -1,0 +1,43 @@
+<header>
+  <div class="logo">
+    <li id="logo"><a href="#">ASD GAMING</a></li>
+  </div>
+  <ul class="nav">
+
+    <li><a [routerLink]="['/news']" [routerLinkActive]="['actived']">News</a></li>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['actived']">About</a></li>
+    <li><a [routerLink]="['/projects']" [routerLinkActive]="['actived']">Projects</a></li>
+    <li><a [routerLink]="['/contact']" [routerLinkActive]="['actived']">Contact</a></li>
+    <li><a [routerLink]="['/create-news']" [routerLinkActive]="['actived']">Create News</a></li>
+  </ul>
+</header>
+<body>
+<section class="section">
+  <div class="content clearfix">
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="sidebar">
+
+    </div>
+  </div>
+</section>
+</body>
+<div class="footer">
+  <div class="footer-top">
+    <span href="https://twitter.com"><i class="fab fa-twitter"><a></a></i></span>
+    <span><i class="fab fa-facebook-f"></i></span>
+    <span><i class="fab fa-linkedin"></i></span>
+    <span><i class="fab fa-youtube"></i></span>
+    <span><i class="fab fa-instagram"></i></span>
+    <span><i class="fab fa-twitch"></i></span>
+  </div>
+  <div class="footer-content">
+    dasdada
+  </div>
+  <div class="footer-bottom">
+    © 2020, ASD Gaming, Inc. All rights reserved.
+  </div>
+
+</div>
