@@ -4,21 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
-import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { CreateNewsComponent } from './components/create-news/create-news.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     NewsComponent,
-    AboutComponent,
     ProjectsComponent,
+    AboutComponent,
     ContactComponent,
-    NotFoundComponent,
-    CreateNewsComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

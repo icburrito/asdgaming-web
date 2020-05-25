@@ -5,6 +5,20 @@
     src: url("assets/fonts/Eurostile.ttf")
 }
 
+@media (min-aspect-ratio: 16/9) {
+    #video-bg{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #video-bg{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -68,6 +82,19 @@
     background-color: rgb(9, 157, 217);
 }
 
+body {
+    background: white;
+    background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+}
+
 header {
     display: block;
     width: 100%;
@@ -83,15 +110,13 @@ header {
     text-size-adjust: 100%;
 }
 
-header .logo{
-    float: left;
-}
 
 header ul {
     display: block;
-    width: 45%;
     height: inherit;
-    margin: 0px auto;
+    margin: 0px auto 0px;
+
+    float: left;
 }
 
 header ul li {
@@ -99,6 +124,7 @@ header ul li {
     margin: 0px auto;
     text-align: center;
     line-height: 50px;
+
 }
 
 header a {
@@ -119,33 +145,35 @@ header a:hover,
 
 
 .logo{
-    font-family: "eurostile", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-}
-
-.logo a{
-    background: transparent;
+    float: left;
 }
 
 .logo a:hover {
-    background: transparent; 
+    background: transparent;
+}
+
+.brand{
+    font-family: "eurostile", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+
+    padding-right: 70px;
+    padding-left: 70px;
 }
 
 
-body {
-    background: white;
-    background-attachment: fixed;
-}
 
-body * {
-    text-rendering: optimizeLegibility;
-    -webkit-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-}
 
+.ue4font{
+    font-family: "eurostile", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    
+}
 
 .footer{
-    display: block;
+    position: relative;
     width: 100%;
     background: #2a2a2a;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -157,7 +185,6 @@ body * {
 
 .footer .footer-top{
     padding-top: 6px;
-    border: 1px dashed burlywood;
     height: 50px;
     text-align: center;
     text-size-adjust: 100%;
@@ -168,8 +195,7 @@ body * {
 }
 
 .footer .footer-content{
-    border: 1px dashed red;
-    height: 60px;
+    height: 20px;
 }
 
 .footer .footer-bottom{
@@ -180,38 +206,83 @@ body * {
     font-size: 10px!important;
 }
 
+
+.home-container{
+    width: 100%;
+    color: white;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+.fullscreen-video-wrap{
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fullscreen-video-wrap video{
+
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20;
+    left: 0;
+    background: #2a2a2a;
+    z-index: 1;
+    opacity: 0.85;
+   
+}
+
+.home-content{
+    margin: 10px;
+    display:inline-block;
+    align-items: center;
+    position: relative;
+    z-index: 2;    
+}
+
+
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 850px;
 }
 
 
 .content{
     width: 70%;
-    min-height: 700px;
+    height: 1000px;
     margin: 0px auto 0px;
     box-shadow: 0px 0px 40px black;
     background: rgba(255,255,255,0.7);
     font-family: "Open Sans" Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px!important;
-
 }
 
 .content .main-content{
     width: 70%;
+    height: 100%;
     float:left;
 
 }
+
 .content .main-content .news-post{
     width: 95%;
     height: 270px;
     margin: 20px auto;
     border-radius: 5px;
     background: lightgray;
-    position: relative;
+
 }
 
 .content .main-content .news-post .read-more{
@@ -232,11 +303,4 @@ body * {
     width: 60%;
     padding: 14px;
     float: right;
-}
-
-.content .sidebar{
-    width: 30%;
-    float: left;
-    border: 1px dashed green;
-    height: 500px;
 }
