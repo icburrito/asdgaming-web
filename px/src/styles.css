@@ -184,8 +184,8 @@ header a:hover,
 }
 
 .footer .footer-top{
-    padding-top: 6px;
-    height: 50px;
+    padding-top: 20px;
+    height: 70px;
     text-align: center;
     text-size-adjust: 100%;
     text-decoration: none;
@@ -242,7 +242,7 @@ header a:hover,
 }
 
 .home-content{
-    margin: 10px;
+    margin: 40px;
     display:inline-block;
     align-items: center;
     position: relative;
