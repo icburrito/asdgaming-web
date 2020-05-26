@@ -1,9 +1,8 @@
 <header>
   <div class="logo">
-    <a class="brand" href="#">ASD Gaming</a>
+    <a class="brand" [routerLink]="['']">ASD Gaming</a>
   </div>
   <ul class="nav">
-    <li><a [routerLink]="['/home']" [routerLinkActive]="['actived']">Home</a></li>
     <li><a [routerLink]="['/news']" [routerLinkActive]="['actived']">News</a></li>
     <li><a [routerLink]="['/projects']" [routerLinkActive]="['actived']">Projects</a></li>
     <li><a [routerLink]="['/about']" [routerLinkActive]="['actived']">About</a></li>
@@ -16,12 +15,12 @@
 
 <div class="footer">
   <div class="footer-top">
-    <span href="https://twitter.com"><i class="fab fa-twitter"><a></a></i></span>
-    <span><i class="fab fa-facebook-f"></i></span>
-    <span><i class="fab fa-linkedin"></i></span>
-    <span><i class="fab fa-youtube"></i></span>
-    <span><i class="fab fa-instagram"></i></span>
-    <span><i class="fab fa-twitch"></i></span>
+    <a href="#"><span href="https://twitter.com"><i class="fab fa-twitter social-icon"></i></span></a>
+    <a href="#"><span><i class="fab fa-facebook-f social-icon"></i></span></a>
+    <a href="#"><span><i class="fab fa-linkedin social-icon"></i></span></a>
+    <a href="#"><span><i class="fab fa-youtube social-icon"></i></span></a>
+    <a href="#"><span><i class="fab fa-instagram social-icon"></i></span></a>
+    <a href="#"><span><i class="fab fa-twitch social-icon"></i></span></a>
   </div>
   <div class="footer-content">
 

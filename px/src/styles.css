@@ -182,11 +182,11 @@ header a {
 }
 
 header a:hover {
-    color: rgb(248, 140, 0);
+    color: rgb(240, 140, 0);
 }
 header .actived{
     background: rgba(0, 0, 0, 0.9);
-    color: rgb(248, 140, 0);
+    color: rgb(240, 140, 0);
 }
 
 
@@ -240,6 +240,12 @@ header .actived{
     letter-spacing: 10px;
 }
 
+.footer .footer-top a {
+    transition: all 300ms;
+    text-decoration: none;
+    color: white;
+}
+
 .footer .footer-content{
     height: 20px;
 }
@@ -252,6 +258,9 @@ header .actived{
     font-size: 10px!important;
 }
 
+.social-icon:hover {
+    color: rgb(240, 140, 0);
+}
 
 .home-container{
     width: 100%;
@@ -341,7 +350,7 @@ header .actived{
 .title-border .line {
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(248, 140, 0);
+    border-bottom-color: rgb(240, 140, 0);
     z-index: 9999;
     position: absolute;
     content: "";
