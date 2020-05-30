@@ -264,6 +264,7 @@ header .actived{
 
 .home-container{
     width: 100%;
+    height: 100%;
     color: white;
     align-items: center;
     text-align: center;
@@ -288,7 +289,7 @@ header .actived{
     left: 0;
     background: #2a2a2a;
     z-index: 1;
-    opacity: 0.85;
+    opacity: 0.70;
    
 }
 
@@ -298,6 +299,11 @@ header .actived{
     align-items: center;
     position: relative;
     z-index: 2;    
+}
+
+.home-service-img{
+    width: 100px;
+    height: 100px;
 }
 
 .title-border>span {
