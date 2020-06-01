@@ -1,27 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
-@font-face{
+@font-face {
     font-family: "Eurostile";
     src: url("assets/fonts/Eurostile.ttf")
 }
-@font-face{
+
+@font-face {
     font-family: "Exo 2";
     src: url("assets/fonts/Exo2.ttf")
 }
 
 @media (min-aspect-ratio: 16/9) {
-    #video-bg{
+    #video-bg {
         width: 100%;
         height: auto;
     }
 }
+
 @media (max-aspect-ratio: 16/9) {
-    #video-bg{
+    #video-bg {
         width: auto;
         height: 100%;
     }
 }
-
 
 * {
     margin: 0px;
@@ -47,7 +48,7 @@
     margin: 40px;
 }
 
-.row{
+.row {
     align-items: center;
 }
 
@@ -55,12 +56,6 @@
     content: "";
     display: table;
     clear: both;
-}
-
-
-.column-container{
-    text-align: center;
-    align-items: center;
 }
 
 .column-1 {
@@ -76,12 +71,7 @@
     text-align: center;
 }
 
-
-  
-
-
-
-.btn{
+.btn {
     background-color: rgb(10, 175, 241);
     color: rgb(255, 255, 255);
     display: inline-block;
@@ -106,7 +96,7 @@
     text-transform: uppercase;
     font-size: 10px!important;
     line-height: 1.42857143;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     text-decoration: none;
@@ -122,7 +112,7 @@
     border-style: solid;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: rgb(9, 157, 217);
 }
 
@@ -145,21 +135,19 @@ header {
     height: 50px;
     background: #2a2a2a;
     text-transform: uppercase;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 10px!important;
     position: static!important;
     line-height: 1.42857143;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
 }
-
 
 header ul {
     display: block;
     height: inherit;
     margin: 0px auto 0px;
-
     float: left;
 }
 
@@ -168,7 +156,6 @@ header ul li {
     margin: 0px auto;
     text-align: center;
     line-height: 50px;
-
 }
 
 header a {
@@ -184,13 +171,13 @@ header a {
 header a:hover {
     color: rgb(240, 140, 0);
 }
-header .actived{
+
+header .actived {
     background: rgba(0, 0, 0, 0.9);
     color: rgb(240, 140, 0);
 }
 
-
-.logo{
+.logo {
     float: left;
 }
 
@@ -198,38 +185,33 @@ header .actived{
     background: transparent;
 }
 
-.brand{
+.brand {
     font-family: "Eurostile", Helvetica, Arial, sans-serif;
     font-size: 12px;
     display: inline-block;
     text-align: center;
     line-height: 50px;
-
     padding-right: 70px;
     padding-left: 70px;
 }
 
-
-
-
-.ue4font{
+.ue4font {
     font-family: "Eurostile", Helvetica, Arial, sans-serif;
     font-size: 50px;
-    
 }
 
-.footer{
+.footer {
     position: relative;
     width: 100%;
     background: #2a2a2a;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     color: lightgray;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
 }
 
-.footer .footer-top{
+.footer .footer-top {
     padding-top: 20px;
     height: 70px;
     text-align: center;
@@ -246,11 +228,11 @@ header .actived{
     color: white;
 }
 
-.footer .footer-content{
+.footer .footer-content {
     height: 20px;
 }
 
-.footer .footer-bottom{
+.footer .footer-bottom {
     display: block;
     width: 100%;
     height: 20px;
@@ -262,7 +244,7 @@ header .actived{
     color: rgb(240, 140, 0);
 }
 
-.home-container{
+.home-container {
     width: 100%;
     height: 100%;
     color: white;
@@ -271,8 +253,7 @@ header .actived{
     position: relative;
 }
 
-
-.fullscreen-video-wrap{
+.fullscreen-video-wrap {
     position: absolute;
     top: 20;
     left: 0;
@@ -281,7 +262,7 @@ header .actived{
     overflow: hidden;
 }
 
-.overlay{
+.overlay {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -290,24 +271,19 @@ header .actived{
     background: #2a2a2a;
     z-index: 1;
     opacity: 0.70;
-   
 }
 
-.home-content{
+.home-content {
     margin: 40px;
-    display:inline-block;
+    display: inline-block;
     align-items: center;
     position: relative;
-    z-index: 2;    
+    z-index: 2;
 }
 
-.home-service-img{
+.home-service-img {
     width: 100px;
     height: 100px;
-}
-
-.home-service-img:hover{
-    
 }
 
 .title-border>span {
@@ -333,8 +309,7 @@ header .actived{
     color: rgb(51, 51, 51);
 }
 
-.title-border>span,
-.title-border>a {
+.title-border>span, .title-border>a {
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -368,4 +343,50 @@ header .actived{
     left: 0px;
     right: 0px;
     display: block;
+}
+
+.game-img-container {
+
+}
+
+.game-img {
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+}
+
+.landscape {
+
+}
+
+.game-desc-container {
+    width: 100%;
+    border: 1px dashed blueviolet;
+    padding: 5px;
+}
+
+.column-container {
+    margin-left: 150px;
+    margin-right: 150px;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+}
+
+.column-2-left {
+    float: left;
+    width: 40%;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    border: 1px dashed fuchsia;
+}
+
+.column-2-right {
+    float: left;
+    width: 60%;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    border: 1px dashed fuchsia;
 }
