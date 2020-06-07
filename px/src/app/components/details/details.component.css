@@ -681,7 +681,7 @@ body {
   }
 
   .blog-article {
-    padding-top: 4em;
+    padding-top: 0px;
   }
 
   .container-fluid {
@@ -901,6 +901,13 @@ body {
   .col-xs-4 {
     width: 33.33%;
   }
+
+  @media screen and (max-width:600px){
+    .col-xs-4{
+        width: 100%;
+        margin-right: 20px;
+    }
+}
 
   .activityGridRow .activity-item {
     border-right: 1px solid #ccc;
@@ -1138,3 +1145,21 @@ body {
   .blog-social .social-count .social-count-subtext {
     font-weight: 400;
   }
+
+
+  .bGfSMe {
+    padding: 5px 10px;
+    margin: 5px 0 10px 0;
+    text-transform: uppercase;
+    opacity: 1;
+    color: #fff;
+    font-size: 0.87em;
+    display: inline-block;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}

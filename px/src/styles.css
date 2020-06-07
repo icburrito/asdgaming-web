@@ -158,6 +158,18 @@ header ul li {
     line-height: 50px;
 }
 
+@media screen and (max-width:600px){
+    .logo{
+        display: none;
+    }
+    header{
+        align-items: center;
+    }
+    ul{
+        float: none;
+    }
+}
+
 header a {
     display: block;
     padding-right: 20px;
@@ -187,7 +199,7 @@ header .actived {
 
 .brand {
     font-family: "Eurostile", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     text-align: center;
     line-height: 50px;

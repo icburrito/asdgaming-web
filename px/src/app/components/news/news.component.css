@@ -681,7 +681,7 @@ body {
   }
 
   .blog-article {
-    padding-top: 4em;
+    padding-top: 0;
   }
 
   .container-fluid {
@@ -901,6 +901,12 @@ body {
   .col-xs-4 {
     width: 33.33%;
   }
+
+  @media screen and (max-width:760px){
+    .col-xs-4{
+        width: 100%;
+    }
+}
 
   .activityGridRow .activity-item {
     border-right: 1px solid #ccc;
