@@ -746,7 +746,7 @@ body {
   [class*=' epic-blog-icon-'],
   [class^=epic-blog-icon-] {
     font-family: icomoon-react-blog !important;
-    speak: none;
+    speak-as: none;
     font-style: normal;
     font-weight: 400;
     -webkit-font-feature-settings: normal;
