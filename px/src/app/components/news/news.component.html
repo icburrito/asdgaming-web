@@ -1,788 +1,87 @@
-<style>
-  body * {
-    text-rendering: optimizeLegibility;
-    -webkit-font-feature-settings: "kern"1;
-    font-feature-settings: "kern"1;
-  }
-
-  *,
-  ::after,
-  ::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  *,
-  ::after,
-  ::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  * {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
-
-  a {
-    background-color: transparent;
-  }
-
-  a {
-    color: #0aaff1;
-    text-decoration: none;
-  }
-
-  html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-
-  body {
-    margin: 0;
-  }
-
-  body,
-  html {
-    background-color: #2a2a2a;
-  }
-
-  .col-lg-1,
-  .col-lg-2,
-  .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11,
-  .col-lg-12,
-  .col-md-1,
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-5,
-  .col-md-6,
-  .col-md-7,
-  .col-md-8,
-  .col-md-9,
-  .col-md-10,
-  .col-md-11,
-  .col-md-12,
-  .col-sm-1,
-  .col-sm-2,
-  .col-sm-3,
-  .col-sm-4,
-  .col-sm-5,
-  .col-sm-6,
-  .col-sm-7,
-  .col-sm-8,
-  .col-sm-9,
-  .col-sm-10,
-  .col-sm-11,
-  .col-sm-12,
-  .col-xs-1,
-  .col-xs-2,
-  .col-xs-3,
-  .col-xs-4,
-  .col-xs-5,
-  .col-xs-6,
-  .col-xs-7,
-  .col-xs-8,
-  .col-xs-9,
-  .col-xs-10,
-  .col-xs-11,
-  .col-xs-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  .col-xs-1,
-  .col-xs-2,
-  .col-xs-3,
-  .col-xs-4,
-  .col-xs-5,
-  .col-xs-6,
-  .col-xs-7,
-  .col-xs-8,
-  .col-xs-9,
-  .col-xs-10,
-  .col-xs-11,
-  .col-xs-12 {
-    float: left;
-  }
-
-  .col-xs-12 {
-    width: 100%;
-  }
-
-  /* @media all and (min-width:1200px) */
-  .col-lg-1,
-  .col-lg-2,
-  .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11,
-  .col-lg-12 {
-    float: left;
-  }
-
-  /* @media all and (min-width:1200px) */
-  .col-lg-4 {
-    width: 33.33%;
-  }
-
-  .ktshed {
-    -webkit-transform: translateY(50px);
-    -ms-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  /* @media only screen and (min-width:1200px) */
-  .feed-view .feed-row,
-  .feed-view [class*=col-] {
-    padding: 0 15px;
-  }
-
-  .ktshed.feed-item-inview {
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0);
-    transform: translateY(0px);
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
-    -webkit-transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-  }
-
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  /* @media only screen and (min-width:1200px) */
-  .feed-view .container .row {
-    margin-bottom: 15px;
-  }
-
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  /* @media all and (min-width:768px) */
-  .container {
-    width: 750px;
-  }
-
-  /* @media all and (min-width:992px) */
-  .container {
-    width: 970px;
-  }
-
-  /* @media all and (min-width:1200px) */
-  .container {
-    width: 1170px;
-  }
-
-  /* @media only screen and (min-width:1200px) */
-  .container,
-  .ue-react.container {
-    width: 1230px;
-  }
-
-  /* @media all and (min-width:1200px) */
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  .feed-view .container {
-    width: 1300px;
-    max-width: 1300px;
-  }
-
-  .feed-view,
-  .filterOpen {
-    overflow: hidden;
-  }
-
-  .feed-view {
-    margin: 0;
-    padding: 40px 0;
-    padding-top: 0px;
-    background: #111;
-    min-height: 100vh;
-  }
-
-  .ue-react {
-    background-color: #fff;
-    font-size: 16px;
-  }
-
-  body {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    line-height: 1.4285;
-    color: #fff;
-    background-color: #fff;
-  }
-
-  html {
-    width: 100%;
-  }
-
-  body {
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0;
-    font-family: OpenSans, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #000;
-  }
-
-  html {
-    font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-
-  .feed-item {
-    background: #262626;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #000;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  .feed-item {
-    height: 550px;
-  }
-
-  .feed-item {
-    min-height: 60px;
-    margin-bottom: 20px;
-  }
-
-  .feed-item .content {
-    padding: 20px 20px 0;
-    position: absolute;
-    bottom: 20px;
-    height: auto;
-    left: 0px;
-    right: 0px;
-    background-color: #262626;
-    min-height: 220px;
-  }
-
-  .clickable {
-    cursor: pointer;
-  }
-
-  .ue-react .clickable,
-  .ue-react .cursor-pointer {
-    cursor: pointer;
-  }
-
-  .feed-item .content .desc>.clickable {
-    line-height: normal;
-  }
-
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-  }
-
-  .h1,
-  .h2,
-  .h3,
-  h1,
-  h2,
-  h3 {
-    margin-top: 22px;
-    margin-bottom: 11px;
-  }
-
-  .h2,
-  h2 {
-    font-size: 24px;
-  }
-
-  .feed-item .h2,
-  .feed-item h2 {
-    color: #fff;
-    margin-bottom: 11px;
-    display: block;
-  }
-
-  :not(.trending).feed-item .h2,
-  :not(.trending).feed-item h2 {
-    font-size: 1.2em;
-    font-family: Brutal_Bold, sans-serif;
-    line-height: 1.5em;
-    text-align: left;
-    margin-top: 0px;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  :not(.trending).feed-item .h2,
-  :not(.trending).feed-item h2 {
-    font-size: 1.3em;
-  }
-
-  .feed-item .short {
-    font-size: 0.87em;
-    line-height: 1.5em;
-    color: #3d3d3d;
-    display: block;
-    width: 100%;
-    color: #fff;
-  }
-
-  .normal-item .short {
-    opacity: 0;
-    max-height: 0px;
-    color: #fff;
-    line-height: 1.5em;
-    -webkit-transition: max-height 1.5s ease-in, opacity 1s ease-in;
-    -o-transition: max-height 1.5s ease-in, opacity 1s ease-in;
-    transition: max-height 1.5s ease-in, opacity 1s ease-in;
-    overflow: hidden;
-  }
-
-  .feed-item .feed-item-details {
-    position: absolute;
-    bottom: 0px;
-    left: 15px;
-  }
-
-  /* @media all and (min-width:1200px) */
-  .hidden-lg {
-    display: none !important;
-  }
-
-  .feed-item .feed-item-details>span {
-    display: inline-block;
-    position: relative;
-  }
-
-  .feed-item .feed-item-details .date {
-    display: inline-block;
-    color: #8c8c8c;
-    font-size: 0.75em;
-  }
-
-  .feed-item-small .feed-item-details .date {
-    font-size: 0.8em;
-  }
-
-  .bGfSMe {
-    padding: 5px 10px;
-    margin: 5px 0 10px 0;
-    text-transform: uppercase;
-    opacity: 1;
-    color: #fff;
-    font-size: 0.87em;
-    display: inline-block;
-    -webkit-transition: opacity 0.1s ease-in-out;
-    transition: opacity 0.1s ease-in-out;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    text-align: center;
-  }
-
-  .feed-item .feed-item-details .feed-content-type,
-  .feed-item .feed-item-details .matching-tag {
-    display: none;
-  }
-
-  .feed-item .h2 a,
-  .feed-item h2 a {
-    color: #fff;
-    -webkit-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
-  }
-
-  .feed-item .image-wrapper {
-    overflow: hidden;
-  }
-
-  .feed-item .image {
-    min-height: 275px;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    -webkit-transition: -webkit-transform .35s ease-in-out, -webkit-box-shadow .35s ease-in-out;
-    transition: -webkit-transform .35s ease-in-out, -webkit-box-shadow .35s ease-in-out;
-    -o-transition: transform .35s ease-in-out, box-shadow .35s ease-in-out;
-    transition: transform .35s ease-in-out, box-shadow .35s ease-in-out;
-    transition: transform .35s ease-in-out, box-shadow .35s ease-in-out, -webkit-transform .35s ease-in-out, -webkit-box-shadow .35s ease-in-out;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  .feed-item .image {
-    height: 325px;
-  }
-
-
-  .ktshed {
-    -webkit-transform: translateY(50px);
-    -ms-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  /* @media only screen and (min-width:1200px) */
-  .feed-view .feed-row,
-  .feed-view [class*=col-] {
-    padding: 0 15px;
-  }
-
-  .ktshed.feed-item-inview {
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0);
-    transform: translateY(0px);
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
-    -webkit-transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-  }
-
-  .top-row :first-child.feed-wrapper {
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0);
-    transform: translateY(0px);
-    opacity: 1;
-  }
-
-  .feed-item {
-    background: #262626;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #000;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  .feed-item {
-    height: 550px;
-  }
-
-  .feed-item {
-    min-height: 60px;
-    margin-bottom: 20px;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item {
-    position: relative;
-    overflow: hidden;
-    background: transparent;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  :not(.trending):not(.no-image).feed-item.top-feed-item {
-    height: 750px;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item .container-image {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 550px;
-    -webkit-transition: opacity .35s ease-in-out, -webkit-transform .35s ease-in-out, -webkit-box-shadow .35s ease-in-out;
-    transition: opacity .35s ease-in-out, -webkit-transform .35s ease-in-out, -webkit-box-shadow .35s ease-in-out;
-    -o-transition: transform .35s ease-in-out, box-shadow .35s ease-in-out, opacity .35s ease-in-out;
-    transition: transform .35s ease-in-out, box-shadow .35s ease-in-out, opacity .35s ease-in-out;
-    transition: transform .35s ease-in-out, box-shadow .35s ease-in-out, opacity .35s ease-in-out, -webkit-transform .35s ease-in-out, -webkit-box-shadow .35s ease-in-out;
-    background: transparent;
-    width: 101%;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  :not(.trending):not(.no-image).feed-item.top-feed-item .container-image {
-    height: 750px;
-  }
-
-  .feed-item .content {
-    padding: 20px 20px 0;
-    position: absolute;
-    bottom: 20px;
-    height: auto;
-    left: 0px;
-    right: 0px;
-    background-color: #262626;
-    min-height: 220px;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item .content {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    z-index: 2;
-    background: transparent;
-    min-height: 20px;
-  }
-
-  /* @media only screen and (min-width:1200px) */
-  :not(.trending):not(.no-image).feed-item.top-feed-item .content {
-    left: 40px;
-  }
-
-  .clickable {
-    cursor: pointer;
-  }
-
-  .ue-react .clickable,
-  .ue-react .cursor-pointer {
-    cursor: pointer;
-  }
-
-  .feed-item .short {
-    font-size: 0.87em;
-    line-height: 1.5em;
-    color: #3d3d3d;
-    display: block;
-    width: 100%;
-    color: #fff;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item .content .short {
-    opacity: 0;
-    max-height: 0px;
-    -webkit-transition: max-height 1.5s ease-in, opacity 1s ease-in;
-    -o-transition: max-height 1.5s ease-in, opacity 1s ease-in;
-    transition: max-height 1.5s ease-in, opacity 1s ease-in;
-  }
-
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-  }
-
-  .h1,
-  .h2,
-  .h3,
-  h1,
-  h2,
-  h3 {
-    margin-top: 22px;
-    margin-bottom: 11px;
-  }
-
-  .feed-item .h2,
-  .feed-item h2 {
-    color: #fff;
-    margin-bottom: 11px;
-    display: block;
-  }
-
-  :not(.trending).feed-item .h2,
-  :not(.trending).feed-item h2 {
-    font-size: 1.2em;
-    font-family: Brutal_Bold, sans-serif;
-    line-height: 1.5em;
-    text-align: left;
-    margin-top: 0px;
-  }
-
-  /* @media only screen and (min-width:1440px) */
-  :not(.trending).feed-item .h2,
-  :not(.trending).feed-item h2 {
-    font-size: 1.3em;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item .title h2 {
-    color: #fff;
-    font-size: 3em;
-    text-transform: uppercase;
-    font-family: Brutal_Bold, sans-serif;
-    line-height: 1.4em;
-  }
-
-  .feed-item .h2 a,
-  .feed-item h2 a {
-    color: #fff;
-    -webkit-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
-  }
-
-  .bGfSMe {
-    padding: 5px 10px;
-    margin: 5px 0 10px 0;
-    text-transform: uppercase;
-    opacity: 1;
-    color: #fff;
-    font-size: 0.87em;
-    display: inline-block;
-    -webkit-transition: opacity 0.1s ease-in-out;
-    transition: opacity 0.1s ease-in-out;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    text-align: center;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item .container-image .feature-image {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100%;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 auto;
-    z-index: 0;
-    opacity: 1;
-  }
-
-  :not(.trending):not(.no-image).feed-item.top-feed-item .container-image-bg {
-    position: relative;
-    height: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(80%, rgba(0, 0, 0, .75)), color-stop(90%, rgba(0, 0, 0, .85)), to(rgba(0, 0, 0, .95)));
-    background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, .75) 80%, rgba(0, 0, 0, .85) 90%, rgba(0, 0, 0, .95));
-    background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, .75) 80%, rgba(0, 0, 0, .85) 90%, rgba(0, 0, 0, .95) 100%);
-    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, .75) 80%, rgba(0, 0, 0, .85) 90%, rgba(0, 0, 0, .95));
-  }
-</style>
-
-
 <div class="ue-react" id="ueReactWrapper">
   <div class="ue-app">
-    <div class="feed-view  " role="presentation">
-      <div class="container">
-        <div class="row">
-          <h2 class="title-border">
-            <span style="color: white;">News<span class="line"></span></span></h2>
-        </div><!--
-        <div class="row top-row">
-          <div class="ktshed feed-wrapper feed-item-full col-xs-12 feed-item-inview ">
-            <div class="top-feed-item feed-item blog ">
-              <div class="container-image"><a title="ASD Studios" class="feed-link" id="news-0" href="">
-                  <div class="feature-image" style='background-image: url("https://api.time.com/wp-content/uploads/2018/11/ac-odyssey-best-video-game.jpg"); transform: translateY(0px);'>
-                  </div>
-                  <div class="container-image-bg"></div>
-                </a></div>
-              <div class="content"><span class="clickable" role="presentation">
-                  <div class="ContentTypeLabel__FeedContentType-sc-1o1ak6n-0 bGfSMe feed-content-type blog"
-                    style="max-width: 100px; background-color: rgb(0, 173, 239);">News<div class="label-bg"></div>
-                  </div>
-                </span>
-                <div class="title">
-                  <h2><a title="" class="feed-link" id="news-0" href="">
-                    ASD Studios</a></h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
-        <div class="row row-3">
-          <div class="feed-row feed-row-normal">
-            <div class="ktshed feed-wrapper feed-item-small col-xs-12 col-lg-4 feed-item-inview ">
-              <div class="normal-item feed-item tech-blog "><a title="" class="feed-link" id="news-1" href="">
-                  <div class="image-wrapper">
-                    <div class="image" style='background-image: url(../../../assets/img/services/game.jpg);'>
-                    </div>
-                  </div>
-                </a>
-                <div class="content">
-                  <div class="desc"><span class="clickable" role="presentation">
-                      <div class="bGfSMe feed-content-type tech-blog"
-                        style="max-width: 100px; background-color: rgb(196, 118, 36);">Tech
-                        Blog<div class="label-bg"></div>
+    <div class="blog-wrapper">
+      <div class="article-view" id="articleView">
+        <div class="blog-container no-image">
+          <div class="blog-header"></div>
+          <section class="blog-article">
+            <div class="blog-content container-fluid">
+              <article>
+                <div class="recentPostContainer">
+                  <h2 class="recent-title"><span>Recent Posts</span></h2>
+                  <div class="container activityGridRow content-grid-row">
+                    <div class="row match-heights content-toss-container">
+                      <div class="content-toss">
+                        <div class="activity-item col-xs-4 content-toss-item __post__"
+                          id="qa-make-games-for-a-chance-to-win-awesome-prizes-during-2020-s-unreal-spring-jam">
+                          <a class="image-link"
+                            id="news-sm_img-make-games-for-a-chance-to-win-awesome-prizes-during-2020-s-unreal-spring-jam"
+                            [routerLink]="['/news/details']">
+                            <div title="" class="image hide-category"
+                              style='background-image: url("https://cdn2.unrealengine.com/Unreal+Engine%2Fblog%2Fmake-games-for-a-chance-to-win-awesome-prizes-during-2020-s-unreal-spring-jam%2FNEWS_UNREALSPRINGJAM_FEED_THUMB-1400x788-ed6c4335da6be506152fd49e20c8a840755cfad8.jpg");'>
+                            </div>
+                          </a>
+                          <div class="hide-category __post-category__"><span class="activityGridRow-date __post-date__"
+                              data-date_="May 27, 2020">May 27, 2020</span></div>
+                          <h2 class="headline __post-title__ hide-category"><a class="accent-hover-color title-case"
+                              id="undefinedmake-games-for-a-chance-to-win-awesome-prizes-during-2020-s-unreal-spring-jam"
+                              [routerLink]="['/news/details']">Make
+                              games for a chance to win awesome prizes during 2020’s
+                              Unreal Spring Jam</a></h2>
+                          <div class="short __post-short__">2020’s Unreal Spring Jam takes
+                            place between June 4-9 and offers chances to...</div>
+                        </div>
+                        <div class="activity-item col-xs-4 content-toss-item __post__"
+                          id="qa-finding-funding-so-you-need-some-money-to-make-a-video-game">
+                          <a class="image-link"
+                            id="news-sm_img-finding-funding-so-you-need-some-money-to-make-a-video-game"
+                            href="/en-US/blog/finding-funding-so-you-need-some-money-to-make-a-video-game">
+                            <div title="" class="image hide-category"
+                              style='background-image: url("https://cdn2.unrealengine.com/Unreal+Engine%2Fblog%2Ffinding-funding-so-you-need-some-money-to-make-a-video-game%2FFEED_THUMB_FindingTheFunding_Part1-1400x788-387abf1d2bd02c92259121580de372da8f7c3688.jpg");'>
+                            </div>
+                          </a>
+                          <div class="hide-category __post-category__"><span class="activityGridRow-date __post-date__"
+                              data-date_="May 26, 2020">May 26, 2020</span></div>
+                          <h2 class="headline __post-title__ hide-category"><a class="accent-hover-color title-case"
+                              id="undefinedfinding-funding-so-you-need-some-money-to-make-a-video-game"
+                              href="/en-US/blog/finding-funding-so-you-need-some-money-to-make-a-video-game">Finding
+                              Funding: So you need some money to make a video
+                              game…</a></h2>
+                          <div class="short __post-short__">Before you start pitching your
+                            studio or project, it’s important to underst...</div>
+                        </div>
+                        <div class="activity-item col-xs-4 content-toss-item __post__"
+                          id="qa-unearth-savings-up-to-70-during-the-unreal-engine-marketplace-spring-sale">
+                          <a class="image-link"
+                            id="news-sm_img-unearth-savings-up-to-70-during-the-unreal-engine-marketplace-spring-sale"
+                            href="/en-US/blog/unearth-savings-up-to-70-during-the-unreal-engine-marketplace-spring-sale">
+                            <div title="" class="image hide-category"
+                              style='background-image: url("https://cdn2.unrealengine.com/Unreal+Engine%2Fblog%2Funearth-savings-up-to-70-during-the-unreal-engine-marketplace-spring-sale%2FFeed_Thumbnail_Desktop-1400x788-6fd26990173817874bebe6e4fec0d0fc89606746.jpg");'>
+                            </div>
+                          </a>
+                          <div class="hide-category __post-category__"><span class="activityGridRow-date __post-date__"
+                              data-date_="May 25, 2020">May 25, 2020</span></div>
+                          <h2 class="headline __post-title__ hide-category"><a class="accent-hover-color title-case"
+                              id="undefinedunearth-savings-up-to-70-during-the-unreal-engine-marketplace-spring-sale"
+                              href="/en-US/blog/unearth-savings-up-to-70-during-the-unreal-engine-marketplace-spring-sale">
+                              Unearth savings up to 70% during the Unreal Engine
+                              Marketplace Spring Sale</a></h2>
+                          <div class="short __post-short__">Make development a breeze with
+                            construction kits, character collections, fl...</div>
+                        </div>
                       </div>
-                    </span><span class="h2"><a
-                        title=""
-                        class="feed-link"
-                        id="news-2"
-                        href="">Why we use Triple AAA character for our game</a></span>
-                    <div class="feed-item-details">
-                      <span class="date">May 28, 2020</span>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="ktshed feed-wrapper feed-item-small col-xs-12 col-lg-4 feed-item-inview ">
-              <div class="normal-item feed-item tech-blog "><a
-                  title='Skydance Interactive shows how it injected VR physicality in "The Walking Dead: Saints &amp; Sinners"'
-                  class="feed-link" id="news-1"
-                  href="/en-US/tech-blog/skydance-interactive-shows-how-it-injected-vr-physicality-and-melee-combat-in-the-walking-dead-saints-sinners">
-                  <div class="image-wrapper">
-                    <div class="image" style='background-image: url(../../../assets/img/ASD.JPG);'>
+                <footer>
+                  <div class="comment-wrapper">
+                    <div class="button-wrapper"><button class="ue-cta-button button-lg"><span>More News</span></button>
                     </div>
                   </div>
-                </a>
-                <div class="content">
-                  <div class="desc"><span class="clickable" role="presentation">
-                      <div class="bGfSMe feed-content-type tech-blog"
-                        style="max-width: 100px; background-color: rgb(0, 173, 239);">News<div class="label-bg"></div>
-                      </div>
-                    </span><span class="h2"><a
-                        title='Skydance Interactive shows how it injected VR physicality in "The Walking Dead: Saints &amp; Sinners"'
-                        class="feed-link"
-                        id="feed-skydance-interactive-shows-how-it-injected-vr-physicality-and-melee-combat-in-the-walking-dead-saints-sinners"
-                        href="/en-US/tech-blog/skydance-interactive-shows-how-it-injected-vr-physicality-and-melee-combat-in-the-walking-dead-saints-sinners">Skydance
-                        Interactive shows how it injected VR physicality in "The Walking
-                        Dead: Saints &amp; Sinners"</a></span>
-                    <div class="feed-item-details">
-                      <span class="date">May 1, 2020</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </footer>
+              </article>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
